@@ -5,7 +5,7 @@ interface SectionProps {
 }
 
 const Section: React.FC<SectionProps> = ({ children }) => {
-  return <div className="w-[85%] mx-auto py-20">{children}</div>;
+  return <div className="w-[85%] mx-auto py-10">{children}</div>;
 };
 
 export default Section;

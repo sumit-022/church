@@ -40,7 +40,7 @@ const DropdownHorizontal: React.FC<DropdownHorizontalProps> = ({
                   : "left-full rounded-r-md"
               )}
             >
-              <ul className="flex flex-col capitalize text-[20px] font-[500]">
+              <ul className="flex flex-col capitalize text font-[500]">
                 {childrens?.map((child, index) => (
                   <li
                     className={clsx(

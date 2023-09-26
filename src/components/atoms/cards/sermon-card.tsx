@@ -27,20 +27,20 @@ const SermonCard: React.FC<SermonCardProps> = ({
         <div className="absolute -bottom-4 left-1/2 right-1/2">
           <div className="flex gap-3 justify-center items-center">
             <div className="flex items-center justify-center bg-primary-yellow p-4 rounded-md">
-              <BsPlay className="text-white text-2xl" />
+              <BsPlay className="text-white text-lg" />
             </div>
             <div className="flex items-center justify-center bg-primary-yellow p-4 rounded-md">
-              <LuMusic2 className="text-white text-2xl" />
+              <LuMusic2 className="text-white text-lg" />
             </div>
             <div className="flex items-center justify-center bg-primary-yellow p-4 rounded-md">
-              <BsBook className="text-white text-2xl" />
+              <BsBook className="text-white text-lg" />
             </div>
           </div>
         </div>
       </div>
       <div className="flex flex-col bg-white px-5 py-8 gap-3">
-        <h3 className="text-3xl font-bold text-gray-800">{title}</h3>
-        <div className="flex flex-col gap-1 text-lg">
+        <h3 className="text-xl font-bold text-gray-800">{title}</h3>
+        <div className="flex flex-col gap-1">
           <p className="text-gray-500">
             Sermon by: <span className="text-primary-yellow">{preacher}</span>
           </p>

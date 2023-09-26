@@ -26,15 +26,15 @@ const Header = () => {
   return (
     <div
       className={clsx(
-        "border-2 mx-auto z-10 bg-white rounded-md transition-all duration-300 py-7",
+        "border-2 mx-auto z-10 bg-white rounded-md transition-all duration-300 py-5",
         scroll ? "w-full sticky top-0 shadow-xl" : "w-[85%] top-10 relative"
       )}
     >
-      <div className={clsx(scroll ? "w-[85%] mx-auto" : "px-8")}>
-        <div className="flex uppercase font-[700] text-lg items-center">
-          <Image src={logo} alt="logo" width={250} height={250} />
+      <div className={clsx(scroll ? "w-[85%] mx-auto" : "px-4")}>
+        <div className="flex uppercase font-bold text-sm items-center">
+          <Image src={logo} alt="logo" width={190} height={190} />
           <div className="flex-1">
-            <ul className="flex gap-10 justify-end pr-6">
+            <ul className="flex gap-10 justify-end pr-8">
               {navLinks.map((link) =>
                 link.type === "mega" ? (
                   <LinkGroup active={false} key={link.title}>
@@ -85,7 +85,7 @@ const Header = () => {
                         </div>
                         {open && (
                           <div className="absolute bg-white z-10 left-0 right-0 translate-y-8 min-w-[300px] py-4 rounded-md transition-opacity duration-300">
-                            <ul className="flex flex-col gap-2 capitalize text-[20px] font-[500]">
+                            <ul className="flex flex-col gap-2 capitalize font-[500]">
                               {link.children?.map((child, index) =>
                                 child?.type === "link" ? (
                                   <li
@@ -149,7 +149,7 @@ const Header = () => {
               )}
             </ul>
           </div>
-          <button className="bg-primary-yellow ml-5 uppercase text-white font-bold py-3 px-4 rounded">
+          <button className="bg-primary-yellow uppercase text-white font-bold py-3 px-4 rounded">
             Donate
           </button>
         </div>

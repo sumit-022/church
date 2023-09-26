@@ -15,6 +15,7 @@ body {
   height: 6px;
   background: #221711;
   position: relative;
+  overflow: hidden;
 }
 .border-line::before {
   content: "\e648";
@@ -25,7 +26,7 @@ body {
   overflow: hidden;
   transform: rotate(45deg);
   font-weight: 500;
-  font-size: 15px;
+  font-size: 10px;
   background: white;
   box-sizing: border-box;
 }

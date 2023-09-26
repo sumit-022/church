@@ -8,10 +8,10 @@ import Audio from "./audio";
 const Sermons = () => {
   return (
     <Section>
-      <h3 className="text-2xl text-primary-yellow text-center font-semibold uppercase">
+      <h3 className="text-xl text-primary-yellow text-center font-semibold uppercase">
         Sermons
       </h3>
-      <h1 className="text-4xl text-center my-7 font-bold">Our Sermons</h1>
+      <h1 className="text-3xl text-center my-7 font-bold">Our Sermons</h1>
       <span className="border-line block my-7 mx-auto"></span>
       <div className="flex gap-8 my-10">
         {data.map((sermon, index) => (
