@@ -2,26 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body {
+  background-color: #f9f9f9;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+::-webkit-scrollbar {
+  display: none;
+}
+
+.border-line {
+  width: 80px;
+  height: 6px;
+  background: #221711;
+  position: relative;
+}
+.border-line::before {
+  content: "\e648";
+  color: white;
+  position: absolute;
+  left: 8px;
+  top: 0px;
+  overflow: hidden;
+  transform: rotate(45deg);
+  font-weight: 500;
+  font-size: 15px;
+  background: white;
+  box-sizing: border-box;
+}
+
+.pulse {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 #b6925c;
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 17px #b6925c;
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 #b6925c;
   }
 }
+.swiper-wrapper {
+  padding-bottom: 80px;
+}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.swiper-pagination-bullet {
+  height: 30px !important;
+  width: 30px !important;
+  background: url(../assets/svg/water.svg) !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+  color: white;
 }
