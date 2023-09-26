@@ -128,6 +128,7 @@ const navLinks = [
         ],
       },
       {
+        type: "dropdown",
         title: "Campaigns",
         slug: "/donate-now",
         children: [

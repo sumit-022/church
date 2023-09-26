@@ -87,7 +87,7 @@ const Header = () => {
                           <div className="absolute bg-white z-10 left-0 right-0 translate-y-8 min-w-[300px] py-4 rounded-md transition-opacity duration-300">
                             <ul className="flex flex-col gap-2 capitalize text-[20px] font-[500]">
                               {link.children?.map((child, index) =>
-                                child.type === "link" ? (
+                                child?.type === "link" ? (
                                   <li
                                     className={clsx(
                                       "text-black p-3 cursor-pointer",

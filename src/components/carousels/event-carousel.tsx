@@ -1,9 +1,9 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import EventCard from "../atoms/cards/event-card";
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 
-const EventCarousel = () => {
+const EventCarousel = ({ data }: { data: EventCardProps[] }) => {
   return (
     <>
       <Swiper
@@ -15,24 +15,11 @@ const EventCarousel = () => {
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
       >
-        <SwiperSlide>
-          <EventCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <EventCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <EventCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <EventCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <EventCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <EventCard />
-        </SwiperSlide>
+        {data.map((event) => (
+          <SwiperSlide key={event.title}>
+            <EventCard {...event} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );
