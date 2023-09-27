@@ -12,7 +12,7 @@ const ContactUs = () => {
 
   return (
     <div className="my-10">
-      <div className={`relative`} style={{ height: `${totalHeight}px` }}>
+      <div className={`relative`}>
         <div className="relative overflow-hidden flex flex-col">
           <Image className="w-full" src={shapetop} alt="shape" />
           <Image

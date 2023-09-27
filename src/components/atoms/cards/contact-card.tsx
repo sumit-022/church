@@ -6,7 +6,7 @@ import Input from "../input";
 const ContactCard = React.forwardRef(({}, ref) => {
   return (
     <div
-      className="w-full absolute z-10 bottom-4 pb-8"
+      className="w-full -mt-36 relative z-10 pb-8"
       ref={ref as Ref<HTMLDivElement>}
     >
       <div className="w-[85%] bg-white mx-auto rounded-md overflow-hidden shadow-md grid grid-cols-[2fr,1fr]">
