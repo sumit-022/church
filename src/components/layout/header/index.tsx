@@ -48,7 +48,7 @@ const Header = () => {
                           <AiOutlinePlus />
                         </div>
                         {open && (
-                          <div className="absolute max-h-[500px] overflow-y-scroll bg-white z-10 left-0 translate-y-8 right-0 w-full p-4 rounded-md transition-opacity duration-300">
+                          <div className="absolute max-h-[400px] overflow-y-scroll bg-white z-10 left-0 translate-y-8 right-0 w-full p-4 rounded-md transition-opacity duration-300">
                             <div className="flex flex-wrap gap-4 justify-center">
                               {link?.children?.map((child) => (
                                 <div

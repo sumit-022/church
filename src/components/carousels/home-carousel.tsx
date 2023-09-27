@@ -16,7 +16,7 @@ const Carousel = () => {
       <Swiper
         className="mySwiper"
         modules={[Autoplay, Navigation]}
-        autoplay={{ delay: 2500, disableOnInteraction: false }}
+        autoplay={{ delay: 2500, disableOnInteraction: true }}
         spaceBetween={0}
         slidesPerView={1}
         navigation
@@ -27,19 +27,19 @@ const Carousel = () => {
           <div className="w-full relative">
             <Image src={image1} alt="image" className="w-full" />
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              <div className="flex flex-col items-center">
-                <p className="text-[#dcb170] text-[45px] font-bold">
+              <div className="flex flex-col items-center gap-3">
+                <p className="text-[#dcb170] text-2xl font-bold">
                   We&apos;re Building them a Home
                 </p>
-                <p className="text-white text-[72px] font-bold">
+                <p className="text-white text-5xl font-bold">
                   We call Price, the Lord
                 </p>
-                <p className="text-[25px] text-center text-white">
+                <p className="text- text-center text-white">
                   Jesus is holy, loving, and worthy of all our worship and
                   devotion. You will feel the heaven in our CSI Abu Dhabi
                   Church. Join with us and praise the Lord Jesus
                 </p>
-                <button className="bg-black text-white px-5 py-3 text-2xl rounded-md mt-2">
+                <button className="bg-black text-white px-3 py-2 text rounded-md mt-2">
                   Donate Now
                 </button>
               </div>

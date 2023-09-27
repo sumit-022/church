@@ -4,3 +4,9 @@ interface EventCardProps {
   time: string;
   title: string;
 }
+
+interface TeamCardProps {
+  image: string | StaticImport;
+  name: string;
+  position: string;
+}

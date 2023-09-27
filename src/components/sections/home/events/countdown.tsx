@@ -14,10 +14,13 @@ const Countdown = () => {
           Events
         </h3>
         <h1 className="text-3xl text-center my-4 font-bold text-white">
-          Upcoming Events
+          Free Family Event Countdown
         </h1>
         <span className="border-line block my-7 mx-auto"></span>
-        <Timer />
+        <Timer date={new Date("Dec 24, 2024 00:00:00")} />
+        <p className="text-center text-white mt-8 text-lg">
+          Dec 24, 2022 - Wednesday 12 am to 4 am
+        </p>
       </div>
       <Image src={bgimage} alt="bg" className="w-full absolute top-0 -z-20" />
       <Image className="rotate-180 w-full" src={shapetop} alt="shape" />
