@@ -1,11 +1,7 @@
 import React from "react";
 import Section from "../../../atoms/wrappers/section";
 import EventCarousel from "@/components/carousels/event-carousel";
-import shapetop from "@/assets/svg/shape-top.svg";
-import bgimage from "@/assets/images/home/bg/bg-4.jpg";
-import Image from "next/image";
 import data from "@/data/events/events";
-import Timer from "@/components/timer";
 import Countdown from "./countdown";
 
 const Events = () => {

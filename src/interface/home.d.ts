@@ -10,3 +10,4 @@ interface TeamCardProps {
   name: string;
   position: string;
 }
+
