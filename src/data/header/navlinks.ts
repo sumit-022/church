@@ -1,4 +1,4 @@
-const navLinks = [
+const navLinks: Navlinks[] = [
   {
     type: "mega",
     title: "Home",
@@ -151,14 +151,17 @@ const navLinks = [
         slug: "/sermons-grid",
         children: [
           {
+            type: "link",
             title: "Sermons Grid 2",
             slug: "/sermons-grid-2",
           },
           {
+            type: "link",
             title: "Sermons Grid 3",
             slug: "/sermons-grid-3",
           },
           {
+            type: "link",
             title: "Sermons Grid 4",
             slug: "/sermons-grid-4",
           },
@@ -253,22 +256,27 @@ const navLinks = [
         title: "Blog Grid",
         children: [
           {
+            type: "link",
             title: "Blog Grid 2",
             slug: "/blog-grid-2",
           },
           {
+            type: "link",
             title: "Blog Grid 3",
             slug: "/blog-grid-3",
           },
           {
+            type: "link",
             title: "Blog Grid 4",
             slug: "/blog-grid-4",
           },
           {
+            type: "link",
             title: "Blog Grid Left Sidebar",
             slug: "/blog-grid-left-sidebar",
           },
           {
+            type: "link",
             title: "Blog Grid Right Sidebar",
             slug: "/blog-grid-right-sidebar",
           },

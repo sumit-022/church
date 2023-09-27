@@ -86,12 +86,13 @@ const Header = () => {
                         {open && (
                           <div className="absolute bg-white z-10 left-0 right-0 translate-y-8 min-w-[300px] py-4 rounded-md transition-opacity duration-300">
                             <ul className="flex flex-col gap-2 capitalize font-[500]">
-                              {link.children?.map((child, index) =>
+                              {link.children?.map((child: Navlinks, index) =>
                                 child?.type === "link" ? (
                                   <li
                                     className={clsx(
                                       "text-black p-3 cursor-pointer",
-                                      index === link.children.length - 1
+                                      index ===
+                                        (link?.children?.length ?? 0) - 1
                                         ? ""
                                         : "border-b-[0.5px]"
                                     )}
@@ -107,11 +108,16 @@ const Header = () => {
                                     icon={<AiOutlinePlus />}
                                     title={child.title}
                                     className={clsx(
-                                      index === link.children.length - 1
+                                      index === (link.children?.length ?? 0) - 1
                                         ? " px-3 py-2"
                                         : "border-b-[0.5px] p-3"
                                     )}
-                                    childrens={child?.children}
+                                    childrens={(child.children ?? []).map(
+                                      (child) => ({
+                                        title: child.title,
+                                        slug: child.slug ?? "",
+                                      })
+                                    )}
                                     key={child.title}
                                   />
                                 )
@@ -135,7 +141,18 @@ const Header = () => {
                         </div>
                         {open && (
                           <div className="absolute cursor-default bg-white z-10 -left-5 right-0 translate-y-8 min-w-[550px] py-4 rounded-md">
-                            <MinistryGrid gridItems={link.gridItems} />
+                            <MinistryGrid
+                              gridItems={(link.gridItems ?? []).map(
+                                (child) => ({
+                                  title: child.title,
+                                  slug: child.slug ?? "",
+                                  children: (child.children ?? []) as {
+                                    title: string;
+                                    slug: string;
+                                  }[],
+                                })
+                              )}
+                            />
                           </div>
                         )}
                       </li>

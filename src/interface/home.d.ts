@@ -11,3 +11,10 @@ interface TeamCardProps {
   position: string;
 }
 
+interface Navlinks {
+  type?: "link" | "dropdown" | "grid" | "mega";
+  title: string;
+  slug?: string;
+  gridItems?: Navlinks[];
+  children?: Navlinks[];
+}

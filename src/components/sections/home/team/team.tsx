@@ -6,7 +6,7 @@ import ContactUs from "./contact-us";
 
 const Team = () => {
   return (
-    <>
+    <div>
       <Section>
         <h3 className="text-xl text-primary-yellow text-center font-semibold uppercase">
           Our Team
@@ -16,7 +16,7 @@ const Team = () => {
         <TeamCarousel data={data} />
       </Section>
       <ContactUs />
-    </>
+    </div>
   );
 };
 
