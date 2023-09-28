@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import Image from "next/image";
 import shapetop from "@/assets/svg/shape-top.svg";
 import bgimage from "@/assets/images/home/bg/bg-3.jpg";
@@ -6,13 +6,9 @@ import shapebottom from "@/assets/svg/shape-bottom.svg";
 import ContactCard from "@/components/atoms/cards/contact-card";
 
 const ContactUs = () => {
-  const height = useRef<HTMLDivElement>(null);
-  const totalHeight =
-    (height.current?.clientHeight ?? 0) + (height.current?.offsetTop ?? 0);
-
   return (
     <div className="my-10">
-      <div className={`relative`}>
+      <div className="relative">
         <div className="relative overflow-hidden flex flex-col">
           <Image className="w-full" src={shapetop} alt="shape" />
           <Image
@@ -32,7 +28,7 @@ const ContactUs = () => {
           </div>
           <Image className="rotate-180 w-full" src={shapebottom} alt="shape" />
         </div>
-        <ContactCard ref={height} />
+        <ContactCard />
       </div>
     </div>
   );

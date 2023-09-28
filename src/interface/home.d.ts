@@ -18,3 +18,10 @@ interface Navlinks {
   gridItems?: Navlinks[];
   children?: Navlinks[];
 }
+
+interface BlogCardProps {
+  image: string | StaticImport;
+  title: string;
+  date: string;
+  slug: string;
+}

@@ -3,12 +3,9 @@ import image from "@/assets/images/home/bg/contact_bg4.jpg";
 import Image from "next/image";
 import Input from "../input";
 
-const ContactCard = React.forwardRef(({}, ref) => {
+const ContactCard = () => {
   return (
-    <div
-      className="w-full -mt-36 relative z-10 pb-8"
-      ref={ref as Ref<HTMLDivElement>}
-    >
+    <div className="w-full -mt-36 relative z-10 pb-8">
       <div className="w-[85%] bg-white mx-auto rounded-md overflow-hidden shadow-md grid grid-cols-[2fr,1fr]">
         <div className="px-4 py-6 flex flex-col justify-center gap-4">
           <Input name="name" placeholder="Name" type="text" />
@@ -25,8 +22,6 @@ const ContactCard = React.forwardRef(({}, ref) => {
       </div>
     </div>
   );
-});
-
-ContactCard.displayName = "ContactCard";
+};
 
 export default ContactCard;
