@@ -16,8 +16,8 @@ const BlogCarousel = ({ nextRef, prevRef, data }: Props) => {
         spaceBetween={50}
         modules={[Navigation]}
         navigation={{
-          nextEl: nextRef.current,
-          prevEl: prevRef.current,
+          nextEl: nextRef?.current,
+          prevEl: prevRef?.current,
         }}
         slidesPerView={3}
         slidesPerGroup={1}
