@@ -29,7 +29,7 @@ const Footer = () => {
       <div className="bg-[#000f21] text-sm px-10 py-4">
         <div className="flex justify-between">
           <p className="text-white">Copyrights © 2023 CSI Parish Abu Dhabi</p>
-          <div className="flex gap-2 text-xs text-white">
+          <div className="flex gap-2 items-center text-xs text-white">
             <Link href="/">Privacy</Link>
             <Link href="/">Sermons</Link>
             <Link href="/">Contact Us</Link>
