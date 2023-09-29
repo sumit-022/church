@@ -1,3 +1,5 @@
+import clsx from "clsx";
+import { useRouter } from "next/router";
 import React from "react";
 
 interface SectionProps {
@@ -5,7 +7,13 @@ interface SectionProps {
 }
 
 const Section: React.FC<SectionProps> = ({ children }) => {
-  return <div className="w-[85%] mx-auto py-10">{children}</div>;
+  const router = useRouter();
+  const isHome = router.pathname === "/";
+  return (
+    <div className={clsx("mx-auto py-10", isHome ? "w-[85%]" : "w-[90%]")}>
+      {children}
+    </div>
+  );
 };
 
 export default Section;

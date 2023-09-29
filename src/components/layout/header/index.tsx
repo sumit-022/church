@@ -13,6 +13,7 @@ import { useRouter } from "next/router";
 const Header = () => {
   const [scroll, setScroll] = useState(false);
   const router = useRouter();
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 100) {

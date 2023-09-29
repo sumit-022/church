@@ -43,7 +43,7 @@ const navLinks: Navlinks[] = [
       {
         type: "link",
         title: "About Us",
-        slug: "/pages/about-us",
+        slug: "/about-us",
       },
       {
         type: "dropdown",
