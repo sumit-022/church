@@ -1,5 +1,11 @@
 function capitalizeString(str: string) {
-  return str.toLowerCase().charAt(0).toUpperCase() + str.slice(1);
+  const words = str.split("-");
+  console.log("Words", words);
+
+  const capitalizedWords = words.map((word) => {
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+  });
+  return capitalizedWords.join(" ");
 }
 
 export default capitalizeString;
