@@ -6,7 +6,6 @@ import Section from "@/components/atoms/wrappers/section";
 import Audio from "@/components/sections/home/sermons/audio";
 import TeamCarousel from "@/components/carousels/team-carousel";
 import data from "@/data/team/team";
-import Team from "@/components/sections/home/team/team";
 
 const AboutUsPage = () => {
   return (

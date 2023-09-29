@@ -132,6 +132,9 @@ const Header = () => {
                                     </li>
                                   ) : (
                                     <DropdownHorizontal
+                                      onClick={() =>
+                                        router.push(child.slug ?? "")
+                                      } 
                                       direction={
                                         link.title === "Blog" ? "left" : "right"
                                       }

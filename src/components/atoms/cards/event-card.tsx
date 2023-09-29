@@ -1,7 +1,6 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import React from "react";
 import Image from "next/image";
-import eventimage from "@/assets/images/home/events/event-1.jpg";
 import Link from "next/link";
 import { IoMdWater } from "react-icons/io";
 
@@ -9,7 +8,7 @@ const EventCard: React.FC<EventCardProps> = ({ image, date, time, title }) => {
   return (
     <div className="flex flex-col">
       <div className="relative">
-        <Image src={image} alt="event" className="rounded-t-md" />
+        <Image src={image} alt="event" className="rounded-t-md w-full" />
         <div className="absolute -bottom-14 left-4 rounded-md bg-[rgba(220,177,112,0.5)]">
           <div className="flex flex-col">
             <IoMdWater className="rotate-180 text-primary-yellow text-[32px] absolute translate-x-full -top-4" />

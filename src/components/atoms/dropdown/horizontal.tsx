@@ -11,6 +11,7 @@ interface DropdownHorizontalProps {
     title: string;
     slug: string;
   }[];
+  onClick?: () => void;
 }
 
 const DropdownHorizontal: React.FC<DropdownHorizontalProps> = ({
@@ -19,13 +20,17 @@ const DropdownHorizontal: React.FC<DropdownHorizontalProps> = ({
   childrens,
   icon,
   className,
+  onClick,
 }) => {
   return (
     <LinkGroup active={false}>
       {(handleClick, open) => (
         <li className="text-black relative cursor-pointer">
           <div
-            className={clsx("flex items-center text-sm justify-between", className)}
+            className={clsx(
+              "flex items-center text-sm justify-between",
+              className
+            )}
             onClick={handleClick}
           >
             {title}
@@ -47,6 +52,7 @@ const DropdownHorizontal: React.FC<DropdownHorizontalProps> = ({
                       "text-black p-4 cursor-pointer",
                       index === childrens.length - 1 ? "" : "border-b-[0.5px]"
                     )}
+                    onClick={onClick}
                     key={child.title}
                   >
                     {child.title}
