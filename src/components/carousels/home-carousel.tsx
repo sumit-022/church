@@ -20,7 +20,6 @@ const Carousel = () => {
         spaceBetween={0}
         slidesPerView={1}
         navigation
-        scrollbar={{ draggable: true }}
         onSlideChange={() => console.log("slide change")}
       >
         <SwiperSlide>
