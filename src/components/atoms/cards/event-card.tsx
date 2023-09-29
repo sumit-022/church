@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { IoMdWater } from "react-icons/io";
+import { LuClock8 } from "react-icons/lu";
 
 const EventCard: React.FC<EventCardProps> = ({ image, date, time, title }) => {
   return (
@@ -11,7 +12,10 @@ const EventCard: React.FC<EventCardProps> = ({ image, date, time, title }) => {
         <Image src={image} alt="event" className="rounded-t-md w-full" />
         <div className="absolute -bottom-14 left-4 rounded-md bg-[rgba(220,177,112,0.5)]">
           <div className="flex flex-col">
-            <IoMdWater className="rotate-180 text-primary-yellow text-[32px] absolute translate-x-full -top-4" />
+            <div className="absolute w-full flex items-center justify-center -top-5">
+              <LuClock8 className=" text-xl text-white absolute top-[21%] z-10" />
+              <IoMdWater className="rotate-180 text-5xl text-primary-yellow" />
+            </div>
             <p className="text text-white text-center px-6 py-7">{date}</p>
             <p className="text-white text text-center rounded-b-md py-2 bg-primary-yellow px-3">
               {time}
