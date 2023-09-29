@@ -25,7 +25,7 @@ const DropdownHorizontal: React.FC<DropdownHorizontalProps> = ({
       {(handleClick, open) => (
         <li className="text-black relative cursor-pointer">
           <div
-            className={clsx("flex items-center text-[17px] justify-between", className)}
+            className={clsx("flex items-center text-sm justify-between", className)}
             onClick={handleClick}
           >
             {title}
@@ -40,7 +40,7 @@ const DropdownHorizontal: React.FC<DropdownHorizontalProps> = ({
                   : "left-full rounded-r-md"
               )}
             >
-              <ul className="flex flex-col capitalize text-[17px] font-[500]">
+              <ul className="flex flex-col capitalize text-sm font-[500]">
                 {childrens?.map((child, index) => (
                   <li
                     className={clsx(

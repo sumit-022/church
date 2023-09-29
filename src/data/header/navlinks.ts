@@ -1,39 +1,40 @@
 const navLinks: Navlinks[] = [
   {
-    type: "mega",
+    type: "link",
     title: "Home",
-    children: [
-      {
-        title: "Home 1",
-      },
-      {
-        title: "Home 2",
-      },
-      {
-        title: "Home 3",
-      },
-      {
-        title: "Home 4",
-      },
-      {
-        title: "Home 5",
-      },
-      {
-        title: "Home 6",
-      },
-      {
-        title: "Home 7",
-      },
-      {
-        title: "Home 8",
-      },
-      {
-        title: "Home 9",
-      },
-      {
-        title: "Home 10",
-      },
-    ],
+    slug: "/",
+    // children: [
+    //   {
+    //     title: "Home 1",
+    //   },
+    //   {
+    //     title: "Home 2",
+    //   },
+    //   {
+    //     title: "Home 3",
+    //   },
+    //   {
+    //     title: "Home 4",
+    //   },
+    //   {
+    //     title: "Home 5",
+    //   },
+    //   {
+    //     title: "Home 6",
+    //   },
+    //   {
+    //     title: "Home 7",
+    //   },
+    //   {
+    //     title: "Home 8",
+    //   },
+    //   {
+    //     title: "Home 9",
+    //   },
+    //   {
+    //     title: "Home 10",
+    //   },
+    // ],
   },
   {
     type: "dropdown",
@@ -42,7 +43,7 @@ const navLinks: Navlinks[] = [
       {
         type: "link",
         title: "About Us",
-        slug: "/about-us",
+        slug: "/pages/about-us",
       },
       {
         type: "dropdown",

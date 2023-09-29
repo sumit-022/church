@@ -51,7 +51,7 @@ const SermonCard: React.FC<SermonCardProps> = ({
                 {categories.join(", ")}
               </span>
             </p>
-            <p className="flex gap-1 items-center text-primary-yellow">
+            <p className="flex gap-1 items-center whitespace-nowrap text-primary-yellow">
               <AiOutlineClockCircle /> {date}
             </p>
           </div>

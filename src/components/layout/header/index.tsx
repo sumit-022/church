@@ -8,9 +8,11 @@ import home from "../../../assets/images/home/home-10.jpg";
 import clsx from "clsx";
 import DropdownHorizontal from "@/components/atoms/dropdown/horizontal";
 import MinistryGrid from "@/components/atoms/dropdown/grid";
+import { useRouter } from "next/router";
 
 const Header = () => {
   const [scroll, setScroll] = useState(false);
+  const router = useRouter();
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 100) {
@@ -27,23 +29,41 @@ const Header = () => {
     <div
       className={clsx(
         "z-50 transition-all duration-300",
-        scroll ? "w-full sticky top-0" : "w-full absolute top-10"
+        router.pathname === "/"
+          ? scroll
+            ? "sticky top-0"
+            : "absolute top-10 w-full"
+          : "sticky top-0 w-full"
       )}
     >
       <div
         className={clsx(
           "relative py-5 mx-auto bg-white transition-all duration-300",
-          scroll ? "w-full shadow-xl" : "w-[85%] rounded-md"
+          router.pathname === "/"
+            ? scroll
+              ? "w-full shadow-xl"
+              : "w-[85%] rounded-md px-4"
+            : scroll
+            ? "w-full shadow-xl"
+            : "w-full"
         )}
       >
-        <div className={clsx(scroll ? "w-[85%] mx-auto" : "px-4")}>
-          <div className="flex uppercase font-bold text-sm items-center">
+        <div
+          className={clsx(
+            router.pathname === "/"
+              ? scroll
+                ? "w-[85%] mx-auto"
+                : "w-full mx-auto"
+              : "w-[90%] mx-auto"
+          )}
+        >
+          <div className="flex uppercase font-bold text-xs items-center">
             <Image src={logo} alt="logo" width={190} height={190} />
             <div className="flex-1">
               <ul className="flex gap-10 justify-end pr-8">
-                {navLinks.map((link) =>
+                {navLinks.map((link, index) =>
                   link.type === "mega" ? (
-                    <LinkGroup active={false} key={link.title}>
+                    <LinkGroup active={false} key={index}>
                       {(handleClick, open) => (
                         <li className="text-black cursor-pointer">
                           <div
@@ -56,10 +76,10 @@ const Header = () => {
                           {open && (
                             <div className="absolute max-h-[400px] overflow-y-scroll bg-white z-10 left-0 translate-y-8 right-0 w-full p-4 rounded-b-md transition-opacity duration-300">
                               <div className="flex flex-wrap gap-4 justify-center">
-                                {link?.children?.map((child) => (
+                                {link?.children?.map((child, index) => (
                                   <div
                                     className="flex flex-col items-center gap-4"
-                                    key={child.title}
+                                    key={index}
                                   >
                                     <Image
                                       src={home}
@@ -96,13 +116,16 @@ const Header = () => {
                                   child?.type === "link" ? (
                                     <li
                                       className={clsx(
-                                        "text-black text-[17px] p-3 cursor-pointer",
+                                        "text-black text-sm p-3 cursor-pointer",
                                         index ===
                                           (link?.children?.length ?? 0) - 1
                                           ? ""
                                           : "border-b-[0.5px]"
                                       )}
                                       key={index}
+                                      onClick={() =>
+                                        router.push(child.slug ?? "")
+                                      }
                                     >
                                       {child.title}
                                     </li>
@@ -147,7 +170,7 @@ const Header = () => {
                             <AiOutlinePlus />
                           </div>
                           {open && (
-                            <div className="absolute cursor-default bg-white z-10 -left-5 right-0 translate-y-8 min-w-[450px] py-4 rounded-b-md">
+                            <div className="absolute cursor-default bg-white z-10 -left-5 right-0 translate-y-8 min-w-[400px] py-4 rounded-b-md">
                               <MinistryGrid
                                 gridItems={(link.gridItems ?? []).map(
                                   (child) => ({
@@ -166,7 +189,11 @@ const Header = () => {
                       )}
                     </LinkGroup>
                   ) : (
-                    <li className="text-black cursor-pointer" key={link.title}>
+                    <li
+                      className="text-black cursor-pointer"
+                      key={index}
+                      onClick={() => router.push(link.slug ?? "")}
+                    >
                       {link.title}
                     </li>
                   )
