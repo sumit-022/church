@@ -1,6 +1,7 @@
 import React from "react";
 import LinkGroup from "./link-group";
 import clsx from "clsx";
+import { useRouter } from "next/router";
 
 interface DropdownHorizontalProps {
   icon: React.ReactNode;
@@ -22,6 +23,7 @@ const DropdownHorizontal: React.FC<DropdownHorizontalProps> = ({
   className,
   onClick,
 }) => {
+  const router = useRouter();
   return (
     <LinkGroup active={false}>
       {(handleClick, open) => (
@@ -52,7 +54,7 @@ const DropdownHorizontal: React.FC<DropdownHorizontalProps> = ({
                       "text-black p-4 cursor-pointer",
                       index === childrens.length - 1 ? "" : "border-b-[0.5px]"
                     )}
-                    onClick={onClick}
+                    onClick={() => router.push(child.slug ?? "")}
                     key={child.title}
                   >
                     {child.title}

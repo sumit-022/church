@@ -113,7 +113,7 @@ const Header = () => {
                           {open && (
                             <div className="absolute bg-white z-10 left-0 right-0 translate-y-8 min-w-[250px] py-4 rounded-b-md transition-opacity duration-300">
                               <ul className="flex flex-col gap-2 capitalize font-[500]">
-                                {link.children?.map((child: Navlinks, index) =>
+                                {link.children?.map((child, index) =>
                                   child?.type === "link" ? (
                                     <li
                                       className={clsx(
@@ -132,9 +132,6 @@ const Header = () => {
                                     </li>
                                   ) : (
                                     <DropdownHorizontal
-                                      onClick={() =>
-                                        router.push(child.slug ?? "")
-                                      } 
                                       direction={
                                         link.title === "Blog" ? "left" : "right"
                                       }

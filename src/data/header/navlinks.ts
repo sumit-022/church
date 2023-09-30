@@ -75,7 +75,7 @@ const navLinks: Navlinks[] = [
         children: [
           {
             title: "Gallery 2 Cloumns",
-            slug: "/gallery-2",
+            slug: "/gallery-columns",
           },
           {
             title: "Gallery 3 Columns",
@@ -105,12 +105,10 @@ const navLinks: Navlinks[] = [
             slug: "/audio",
           },
           {
-            type: "link",
             title: "Single Gallery",
             slug: "/single-gallery",
           },
           {
-            type: "link",
             title: "Google Maps",
             slug: "/google-maps",
           },
@@ -122,7 +120,6 @@ const navLinks: Navlinks[] = [
         slug: "/our-pastors",
         children: [
           {
-            type: "link",
             title: "Our Pastors Slide",
             slug: "/our-pastors-slide",
           },
@@ -133,11 +130,7 @@ const navLinks: Navlinks[] = [
         title: "Campaigns",
         slug: "/donate-now",
         children: [
-          {
-            type: "link",
-            title: "Donate Now",
-            slug: "/donate-now",
-          },
+          {title:"",slug:""},
         ],
       },
     ],
@@ -152,17 +145,14 @@ const navLinks: Navlinks[] = [
         slug: "/sermons-grid",
         children: [
           {
-            type: "link",
             title: "Sermons Grid 2",
             slug: "/sermons-grid-2",
           },
           {
-            type: "link",
             title: "Sermons Grid 3",
             slug: "/sermons-grid-3",
           },
           {
-            type: "link",
             title: "Sermons Grid 4",
             slug: "/sermons-grid-4",
           },
@@ -257,27 +247,22 @@ const navLinks: Navlinks[] = [
         title: "Blog Grid",
         children: [
           {
-            type: "link",
             title: "Blog Grid 2",
             slug: "/blog-grid-2",
           },
           {
-            type: "link",
             title: "Blog Grid 3",
             slug: "/blog-grid-3",
           },
           {
-            type: "link",
             title: "Blog Grid 4",
             slug: "/blog-grid-4",
           },
           {
-            type: "link",
             title: "Blog Grid Left Sidebar",
             slug: "/blog-grid-left-sidebar",
           },
           {
-            type: "link",
             title: "Blog Grid Right Sidebar",
             slug: "/blog-grid-right-sidebar",
           },

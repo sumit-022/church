@@ -16,7 +16,16 @@ interface Navlinks {
   title: string;
   slug?: string;
   gridItems?: Navlinks[];
-  children?: Navlinks[];
+  children?: {
+    type?: "link" | "dropdown" | "grid" | "mega";
+    title: string;
+    slug?: string;
+    gridItems?: Navlinks[];
+    children?: {
+      title: string;
+      slug: string;
+    }[];
+  }[];
 }
 
 interface BlogCardProps {
