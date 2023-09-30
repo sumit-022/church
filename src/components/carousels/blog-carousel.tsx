@@ -2,6 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import BlogCard from "../atoms/cards/blog-card";
+import useMediaQuery from "@/hooks/use-media-query";
 
 interface Props {
   nextRef: React.RefObject<HTMLDivElement>;
@@ -10,6 +11,8 @@ interface Props {
 }
 
 const BlogCarousel = ({ nextRef, prevRef, data }: Props) => {
+  const isTablet = useMediaQuery("(max-width: 1024px)");
+  const isMobile = useMediaQuery("(max-width: 640px)");
   return (
     <>
       <Swiper
@@ -19,7 +22,7 @@ const BlogCarousel = ({ nextRef, prevRef, data }: Props) => {
           nextEl: nextRef?.current,
           prevEl: prevRef?.current,
         }}
-        slidesPerView={3}
+        slidesPerView={isMobile ? 1 : isTablet ? 2 : 3}
         slidesPerGroup={1}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}

@@ -24,7 +24,7 @@ const Timer = ({ date }: { date: Date }) => {
   }, [date]);
 
   return (
-    <div className="flex gap-4 justify-center items-center">
+    <div className="flex gap-4 flex-wrap justify-center items-center">
       <div className="w-32 h-32 rounded-full bg-white flex items-center flex-col justify-center">
         <p className="text-center text-5xl font-bold text-primary-yellow">
           {time.days}

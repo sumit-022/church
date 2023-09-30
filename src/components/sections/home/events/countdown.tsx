@@ -22,7 +22,12 @@ const Countdown = () => {
           Dec 24, 2022 - Wednesday 12 am to 4 am
         </p>
       </div>
-      <Image src={bgimage} alt="bg" className="w-full absolute top-0 -z-20" />
+      <Image
+        src={bgimage}
+        alt="bg"
+        className="w-full h-full absolute top-0 -z-20"
+        objectFit="cover"
+      />
       <Image className="rotate-180 w-full" src={shapetop} alt="shape" />
     </div>
   );

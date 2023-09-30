@@ -1,8 +1,7 @@
 import React from "react";
 import Header from "./header";
 import dynamic from "next/dynamic";
-// const MobileHeader = dynamic(() => import("./header/mobile"), { ssr: false });
-import MobileHeader from "./header/mobile";
+const MobileHeader = dynamic(() => import("./header/mobile"), { ssr: false });
 import Footer from "./footer";
 import useMediaQuery from "@/hooks/use-media-query";
 

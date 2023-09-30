@@ -9,12 +9,14 @@ import image3 from "@/assets/images/carousels/home/3.jpg";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import useMediaQuery from "@/hooks/use-media-query";
 
 const Carousel = () => {
+  const isTablet = useMediaQuery("(min-width: 700px)");
   return (
-    <div className="w-full h-full">
+    <div className="w-full min-h-[400px]">
       <Swiper
-        className="mySwiper"
+        className="mySwiper md:h-full h-[400px]"
         modules={[Autoplay, Navigation]}
         autoplay={{ delay: 2500, disableOnInteraction: true }}
         spaceBetween={0}
@@ -24,13 +26,13 @@ const Carousel = () => {
       >
         <SwiperSlide>
           <div className="w-full relative">
-            <Image src={image1} alt="image" className="w-full" />
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              <div className="flex flex-col items-center gap-3">
-                <p className="text-[#dcb170] text-2xl font-bold">
+            <Image src={image1} alt="image" className="w-full min-h-[400px]" />
+            <div className="absolute w-full top-0 bottom-0">
+              <div className="flex flex-col items-center gap-3 h-full justify-center p-3">
+                <p className="text-[#dcb170] md:text-2xl text-lg font-bold">
                   We&apos;re Building them a Home
                 </p>
-                <p className="text-white text-5xl font-bold">
+                <p className="text-white sm:text-2xl md:text-3xl text-xl text-center font-bold">
                   We call Price, the Lord
                 </p>
                 <p className="text- text-center text-white">
@@ -46,10 +48,14 @@ const Carousel = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <Image src={image2} alt="image" className="w-full" />
+          <Image src={image2} alt="image" className="w-full min-h-[400px]" />
         </SwiperSlide>
         <SwiperSlide>
-          <Image src={image3} alt="image" className="w-full" />
+          <Image
+            src={image3}
+            alt="image"
+            className="w-full md: min-h-[400px]"
+          />
         </SwiperSlide>
       </Swiper>
     </div>
