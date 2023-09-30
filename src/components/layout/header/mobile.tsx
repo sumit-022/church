@@ -13,7 +13,7 @@ const MobileHeader = () => {
   };
 
   return (
-    <div className="sticky bg-white z-10 shadow-md w-full top-0">
+    <div className="sticky bg-white z-20 shadow-md w-full top-0">
       <div className="flex items-center justify-between p-4 relative">
         <RxHamburgerMenu className="text-2xl" onClick={handleOpen} />
         <div
