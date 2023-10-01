@@ -128,10 +128,7 @@ const navLinks: Navlinks[] = [
       {
         type: "dropdown",
         title: "Campaigns",
-        slug: "/donate-now",
-        children: [
-          {title:"",slug:""},
-        ],
+        children: [{ title: "Donate Now", slug: "/donate-now" }],
       },
     ],
   },

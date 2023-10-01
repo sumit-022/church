@@ -201,7 +201,10 @@ const Header = () => {
                 )}
               </ul>
             </div>
-            <button className="bg-primary-yellow uppercase text-white font-bold py-3 px-4 rounded">
+            <button
+              className="bg-primary-yellow uppercase text-white font-bold py-3 px-4 rounded"
+              onClick={() => router.push("/donate-now")}
+            >
               Donate
             </button>
           </div>
