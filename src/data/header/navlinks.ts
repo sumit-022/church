@@ -173,7 +173,7 @@ const navLinks: Navlinks[] = [
       {
         type: "link",
         title: "Sermons Details",
-        slug: "/sermons-details",
+        slug: "/sermon-details",
       },
     ],
   },

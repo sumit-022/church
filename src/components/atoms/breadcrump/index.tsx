@@ -12,6 +12,7 @@ const BreadCrump = () => {
   const breadPath = path.map((item) =>
     capitalizeString(item).replace("-", " ")
   );
+  const limitedBreadPath = breadPath.slice(0, 2);
 
   return (
     <>
@@ -24,21 +25,21 @@ const BreadCrump = () => {
         <div className="w-full h-full bg-[rgba(0,21,47,0.86)] absolute -z-10 top-0 left-0"></div>
         <div className="flex flex-col justify-center items-center gap-4 h-full">
           <div className="flex justify-center gap-3">
-            {breadPath.map((item, index) => (
+            {limitedBreadPath.map((item, index) => (
               <React.Fragment key={index}>
                 {item === "" ? (
                   <span className="text-primary-yellow">Home</span>
                 ) : (
                   <span className="text-white">{item}</span>
                 )}
-                {index < breadPath.length - 1 && (
+                {index < limitedBreadPath.length - 1 && (
                   <span className="text-white">-</span>
                 )}
               </React.Fragment>
             ))}
           </div>
           <p className="text-white text-center text-4xl font-bold">
-            {breadPath[breadPath.length - 1]}
+            {breadPath[1]}
           </p>
         </div>
       </div>

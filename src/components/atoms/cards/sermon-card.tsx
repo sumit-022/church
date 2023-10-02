@@ -8,20 +8,13 @@ import { useRouter } from "next/router";
 import clsx from "clsx";
 import Link from "next/link";
 
-interface SermonCardProps {
-  title: string;
-  image: string | StaticImport;
-  date: string;
-  categories: string[];
-  preacher: string;
-}
-
 const SermonCard: React.FC<SermonCardProps> = ({
   title,
   preacher,
   image,
   categories,
   date,
+  id,
 }) => {
   const router = useRouter();
   return (
@@ -74,7 +67,10 @@ const SermonCard: React.FC<SermonCardProps> = ({
         </div>
         <div>
           {router.pathname === "/" ? (
-            <button className="bg-primary-yellow text-white py-2 px-5 rounded-md">
+            <button
+              className="bg-primary-yellow text-white py-2 px-5 rounded-md"
+              onClick={() => router.push(`/sermon-details/${id}`)}
+            >
               Read More
             </button>
           ) : (
