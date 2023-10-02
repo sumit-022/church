@@ -4,6 +4,9 @@ import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { BsPlay, BsBook } from "react-icons/bs";
 import { LuMusic2 } from "react-icons/lu";
+import { useRouter } from "next/router";
+import clsx from "clsx";
+import Link from "next/link";
 
 interface SermonCardProps {
   title: string;
@@ -20,12 +23,25 @@ const SermonCard: React.FC<SermonCardProps> = ({
   categories,
   date,
 }) => {
+  const router = useRouter();
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col max-w-[360px]">
       <div className="relative">
         <Image src={image} alt={title} className="rounded-t-md" />
-        <div className="absolute -bottom-4 left-1/2 right-1/2">
-          <div className="flex gap-3 justify-center items-center">
+        <div
+          className={clsx(
+            router.pathname === "/"
+              ? "absolute -bottom-4 left-1/2 right-1/2"
+              : "bg-white w-full pt-8"
+          )}
+        >
+          <div
+            className={clsx(
+              router.pathname === "/"
+                ? "flex gap-3 justify-center items-center"
+                : "flex gap-3 pl-4"
+            )}
+          >
             <div className="flex items-center justify-center bg-primary-yellow p-4 rounded-md">
               <BsPlay className="text-white text-lg" />
             </div>
@@ -57,9 +73,19 @@ const SermonCard: React.FC<SermonCardProps> = ({
           </div>
         </div>
         <div>
-          <button className="bg-primary-yellow text-white py-2 px-5 rounded-md">
-            Read More
-          </button>
+          {router.pathname === "/" ? (
+            <button className="bg-primary-yellow text-white py-2 px-5 rounded-md">
+              Read More
+            </button>
+          ) : (
+            <Link
+              href="/sermons/[slug]"
+              as="/sermons/sermon-slug"
+              className="text-primary-yellow underline underline-offset-4 font-semibold"
+            >
+              Read More
+            </Link>
+          )}
         </div>
       </div>
     </div>

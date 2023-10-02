@@ -143,7 +143,7 @@ const navLinks: Navlinks[] = [
         children: [
           {
             title: "Sermons Grid 2",
-            slug: "/sermons-grid-2",
+            slug: "/sermons-grid",
           },
           {
             title: "Sermons Grid 3",

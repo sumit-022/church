@@ -1,21 +1,23 @@
 import Section from "@/components/atoms/wrappers/section";
 import BlogCarousel from "@/components/carousels/blog-carousel";
-import React, { useImperativeHandle, useRef } from "react";
+import React, { useCallback, useRef } from "react";
 import { AiOutlineLeft } from "react-icons/ai";
 import data from "@/data/blog/blog";
+import { clsx } from "clsx";
+import { SwiperRef } from "swiper/react";
 
 const Blog = () => {
-  const nextRef = useRef<HTMLDivElement>(null);
-  const prevRef = useRef<HTMLDivElement>(null);
+  const sliderRef = useRef<SwiperRef>(null);
 
-  const handleNextClick = () => {
-    nextRef.current?.click();
-  };
+  const handlePrev = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slidePrev();
+  }, []);
 
-  const handlePrevClick = () => {
-    prevRef.current?.click();
-  };
-
+  const handleNext = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slideNext();
+  }, []);
   return (
     <Section>
       <h3 className="text-xl text-primary-yellow text-center font-semibold uppercase">
@@ -26,21 +28,23 @@ const Blog = () => {
       <div className="relative">
         <div className="absolute flex gap-4 top-0 -mt-16 right-0">
           <div
-            className="w-10 text-white rounded-md h-10 cursor-pointer flex hover:bg-black transition-all duration-200 justify-center items-center bg-primary-yellow rotate-45"
-            ref={prevRef}
-            onClick={handlePrevClick}
+            className={clsx(
+              "w-10 text-white rounded-md h-10 cursor-pointer flex hover:bg-black transition-all duration-200 justify-center items-center bg-primary-yellow rotate-45"
+            )}
+            onClick={handlePrev}
           >
             <AiOutlineLeft className="-rotate-45" />
           </div>
           <div
-            className="w-10 text-white cursor-pointer rounded-md h-10 flex justify-center items-center bg-primary-yellow hover:bg-black transition-all duration-200 rotate-45"
-            ref={nextRef}
-            onClick={handleNextClick}
+            className={clsx(
+              "w-10 text-white cursor-pointer rounded-md h-10 flex justify-center items-center bg-primary-yellow hover:bg-black transition-all duration-200 rotate-45"
+            )}
+            onClick={handleNext}
           >
             <AiOutlineLeft className="rotate-[135deg]" />
           </div>
         </div>
-        <BlogCarousel nextRef={nextRef} prevRef={prevRef} data={data} />
+        <BlogCarousel data={data} sliderRef={sliderRef} />
       </div>
     </Section>
   );

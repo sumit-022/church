@@ -12,7 +12,6 @@ const BreadCrump = () => {
   const breadPath = path.map((item) =>
     capitalizeString(item).replace("-", " ")
   );
-  console.log(breadPath);
 
   return (
     <>
