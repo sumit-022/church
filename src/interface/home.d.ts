@@ -1,4 +1,5 @@
 interface EventCardProps {
+  id: string;
   image: string | StaticImport;
   date: string;
   time: string;

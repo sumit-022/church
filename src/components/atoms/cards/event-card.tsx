@@ -5,7 +5,13 @@ import Link from "next/link";
 import { IoMdWater } from "react-icons/io";
 import { LuClock8 } from "react-icons/lu";
 
-const EventCard: React.FC<EventCardProps> = ({ image, date, time, title }) => {
+const EventCard: React.FC<EventCardProps> = ({
+  image,
+  date,
+  time,
+  title,
+  id,
+}) => {
   return (
     <div className="flex flex-col">
       <div className="relative">
@@ -26,7 +32,7 @@ const EventCard: React.FC<EventCardProps> = ({ image, date, time, title }) => {
       <div className="bg-white pt-20 pb-8 px-4 flex flex-col gap-10">
         <p className="font-bold text-xl leading-8">{title}</p>
         <Link
-          href="/events/1"
+          href={`/event-details/${id}`}
           className="text-primary-yellow border-b-[3px] border-primary-yellow w-max"
         >
           Event Details
