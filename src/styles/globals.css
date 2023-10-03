@@ -84,3 +84,7 @@ body {
   z-index: -1;
   transform: skewY(-45deg);
 }
+
+.overlay-custom {
+  background-color: rgb(7 14 32 / 82%);
+}

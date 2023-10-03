@@ -3,7 +3,7 @@ import GalleryCard from "@/components/atoms/cards/gallery-card";
 import Section from "@/components/atoms/wrappers/section";
 import Layout from "@/components/layout";
 import React from "react";
-import data from "@/data/gallery/index";
+import data from "@/data/gallery";
 
 const GalleryColumnsPage = () => {
   return (

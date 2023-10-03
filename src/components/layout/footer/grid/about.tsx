@@ -3,7 +3,7 @@ import Layout from ".";
 
 import { BiLogoFacebook, BiLogoPinterestAlt } from "react-icons/bi";
 import { FiTwitter } from "react-icons/fi";
-import { TfiInstagram, TfiTwitter, TfiYoutube } from "react-icons/tfi";
+import { TfiInstagram, TfiYoutube } from "react-icons/tfi";
 
 const About = () => {
   return (

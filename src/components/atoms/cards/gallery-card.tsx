@@ -2,16 +2,23 @@ import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import React from "react";
 import Image from "next/image";
 import { HiMagnifyingGlassPlus } from "react-icons/hi2";
+import { useRouter } from "next/router";
 
 const GalleryCard = ({
   image,
   title,
+  id,
 }: {
   image: StaticImport;
   title: string;
+  id: number;
 }) => {
+  const router = useRouter();
   return (
-    <div className="relative max-h-[550px] overflow-hidden max-w-[550px]">
+    <div
+      className="relative max-h-[550px] overflow-hidden max-w-[550px]"
+      onClick={() => router.push(`/gallery-standard/${id}`)}
+    >
       <Image
         src={image}
         alt="image"
