@@ -10,7 +10,7 @@ const EventsPage = () => {
     <Layout>
       <BreadCrump />
       <Section>
-        <div className="grid gap-6 grid-cols-3">
+        <div className="flex gap-6 flex-wrap justify-center">
           {data.map((item, index) => (
             <EventCard key={index} {...item} />
           ))}

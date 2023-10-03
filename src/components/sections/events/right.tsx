@@ -110,7 +110,7 @@ const RightContent: React.FC<Props> = ({
         </div>
       </div>
       <p className="bg-primary-yellow p-3 text-center font-bold text-xl text-white">
-        Event Venue
+        Event Registration
       </p>
       <div className="border p-6">
         <div className="flex flex-col gap-3">
