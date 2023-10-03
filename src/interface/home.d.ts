@@ -4,6 +4,18 @@ interface EventCardProps {
   date: string;
   time: string;
   title: string;
+  images: string[] | StaticImport[];
+  description: string;
+  about: string;
+  venue: string;
+  startDate: string;
+  endDate: string;
+  organizer: string;
+  cost: string;
+  address: string;
+  email: string;
+  phone: string;
+  website: string;
 }
 
 interface TeamCardProps {
