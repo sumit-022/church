@@ -10,17 +10,17 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div className="relative overflow-hidden">
-      <div className="absolute top-0 left-0 -z-10">
+      <div className="absolute top-0 left-0 -z-10 h-full">
         <Image
           src={footerbg}
-          className="relative -z-20"
+          className="relative -z-20 h-full"
           alt="footer background"
           objectFit="cover"
           objectPosition="center"
         />
         <div className="w-full h-full bg-[rgba(0,21,47,0.86)] absolute -z-10 top-0"></div>
       </div>
-      <div className="grid grid-cols-4 p-10 pb-20 gap-4 text-white">
+      <div className="lg:grid-cols-4 lg:grid flex flex-col p-10 pb-20 lg:gap-4 gap-10 text-white">
         <About />
         <QuickLinks />
         <LatestNews />

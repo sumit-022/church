@@ -1,7 +1,6 @@
 import React from "react";
 import Section from "@/components/atoms/wrappers/section";
 import Layout from "@/components/layout";
-import image1 from "@/assets/images/pages/gallery/1.jpg";
 import Image from "next/image";
 import BreadCrump from "@/components/atoms/breadcrump";
 import ImageContent from "@/components/sections/gallery/image-content";

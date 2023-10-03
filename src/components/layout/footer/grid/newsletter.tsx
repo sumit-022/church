@@ -13,7 +13,7 @@ const Newsletter = () => {
         <input
           type="email"
           placeholder="Enter your email"
-          className="p-3 border border-gray-300 rounded-l-md"
+          className="p-3 border border-gray-300 rounded-l-md w-full"
         />
         <button className="p-3 bg-yellow-500 text-white rounded-r-md">
           Subscribe
