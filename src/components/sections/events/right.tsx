@@ -72,7 +72,7 @@ const RightContent: React.FC<Props> = ({
     },
   ];
   return (
-    <div className="w-[30%]">
+    <div className="lg:w-[30%] w-full">
       <p className="bg-primary-yellow p-3 rounded-t-lg text-center font-bold text-xl text-white">
         Event Details
       </p>

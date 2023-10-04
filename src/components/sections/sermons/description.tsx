@@ -6,7 +6,7 @@ const Description = ({ description }: { description: string }) => {
       <p className="text-2xl font-bold">
         Sermon <span className="text-primary-yellow">Description</span>
       </p>
-      <p className="text-primary-grey">{description}</p>
+      <p className="text-primary-grey mb-6">{description}</p>
     </div>
   );
 };

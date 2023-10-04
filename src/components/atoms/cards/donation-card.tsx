@@ -9,7 +9,7 @@ const DonationCard = () => {
       <DonationAmount />
       <Detail />
       <Payment />
-      <button className="w-max bg-primary-yellow text-white py-2 px-8 rounded-[4px] text-lg">
+      <button className="w-max bg-primary-yellow text-white py-2 px-8 rounded-[4px] text-lg mb-4">
         Donate
       </button>
     </div>

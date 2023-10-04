@@ -17,7 +17,7 @@ const LeftContent: React.FC<Props> = ({
   images,
 }: Props) => {
   return (
-    <div className=" w-[70%]">
+    <div className=" lg:w-[70%] w-full">
       <p className="text-primary-grey">{about}</p>
       <p className="font-bold my-4 text-3xl">
         Event <span className="text-primary-yellow">Description</span>

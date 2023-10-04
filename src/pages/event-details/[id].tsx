@@ -24,7 +24,7 @@ const EventDetails = () => {
             alt="banner"
             className="rounded-md h-[500px] w-full mb-4"
           />
-          <div className="flex gap-14 my-7">
+          <div className="flex lg:flex-row flex-col gap-14 my-7">
             <LeftContent {...event} />
             <RightContent {...event} />
           </div>

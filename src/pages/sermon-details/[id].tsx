@@ -28,7 +28,7 @@ const SermonDetailsPage = () => {
             date={sermon.date}
             preacher={sermon.preacher}
           />
-          <div className="flex gap-4 mt-8">
+          <div className="flex lg:flex-row flex-col gap-4 mt-8">
             <Image src={image1} alt="image1" className="rounded-[8px]" />
             <Image src={image2} alt="image2" className="rounded-[8px]" />
           </div>

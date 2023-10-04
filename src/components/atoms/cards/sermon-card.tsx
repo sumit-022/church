@@ -74,13 +74,12 @@ const SermonCard: React.FC<SermonCardProps> = ({
               Read More
             </button>
           ) : (
-            <Link
-              href="/sermons/[slug]"
-              as="/sermons/sermon-slug"
-              className="text-primary-yellow underline underline-offset-4 font-semibold"
+            <p
+              onClick={() => router.push(`/sermon-details/${id}`)}
+              className="text-primary-yellow underline underline-offset-4 cursor-pointer font-semibold"
             >
               Read More
-            </Link>
+            </p>
           )}
         </div>
       </div>

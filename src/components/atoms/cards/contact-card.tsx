@@ -5,7 +5,7 @@ import Input from "../input";
 
 const ContactCard = () => {
   return (
-    <div className="w-[85%] mx-auto flex md:flex-row flex-col rounded-md md:gap-0 gap-6 md:-mt-36 -mt-20 relative z-10 pb-8">
+    <div className="w-full mx-auto flex md:flex-row flex-col rounded-md md:gap-0 gap-6 pb-8">
       <div className="bg-white mx-auto overflow-hidden md:rounded-l-md rounded-md shadow-md w-full">
         <div className="px-4 py-6 flex flex-col justify-center gap-4">
           <Input
@@ -37,7 +37,7 @@ const ContactCard = () => {
       <Image
         src={image}
         alt="contact"
-        className="md:rounded-r-md rounded-md md:w-auto w-full md:h-full h-[500px]"
+        className="md:rounded-r-md md:rounded-none rounded-md md:w-auto w-full md:h-full h-[500px]"
       />
     </div>
   );

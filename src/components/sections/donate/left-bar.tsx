@@ -4,7 +4,7 @@ import CampaignCard from "@/components/atoms/cards/campaign-card";
 
 const CampaignBar = () => {
   return (
-    <div className="flex flex-col gap-4 border w-[30%] h-full p-5">
+    <div className="flex flex-col gap-4 border lg:w-[30%] w-full h-full p-5">
       {data.map((c, i) => {
         return (
           <>

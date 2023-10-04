@@ -1,14 +1,14 @@
-import React from 'react'
-import CampaignBar from './left-bar'
-import Donate from './donate'
+import React from "react";
+import CampaignBar from "./left-bar";
+import Donate from "./donate";
 
 const DonateNow = () => {
   return (
-      <div className='flex gap-20'>
+    <div className="flex lg:flex-row flex-col gap-20">
       <CampaignBar />
       <Donate />
     </div>
-  )
-}
+  );
+};
 
-export default DonateNow
+export default DonateNow;

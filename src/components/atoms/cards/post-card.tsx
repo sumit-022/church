@@ -13,16 +13,15 @@ interface Props {
 
 const PostCard = ({ title, date, icon, image }: Props) => {
   return (
-    <div className="grid gap-4 grid-cols-[1fr,2fr]">
+    <div className="flex gap-4">
       {!image ? (
-        <div className="h-full w-full flex justify-center items-center text-white text-xl bg-primary-yellow rounded-sm">{icon}</div>
+        <div className="h-20 w-28 flex justify-center items-center text-white text-xl bg-primary-yellow rounded-md">
+          {icon}
+        </div>
       ) : (
-        <Image
-          src={image}
-          alt={title}
-          objectFit="cover"
-          className="rounded-md w-full"
-        />
+        <div className="h-20 w-28">
+          <Image src={image} alt={title} className="rounded-md w-full h-full" />
+        </div>
       )}
       <div className="flex flex-col">
         <p className="font-semibold text-[15px]">{title}</p>

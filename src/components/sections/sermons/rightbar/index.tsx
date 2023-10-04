@@ -7,7 +7,7 @@ import Tags from "./tags";
 
 const RightBar = () => {
   return (
-    <div className="flex flex-col gap-8 w-[30%]">
+    <div className="flex flex-col gap-8 lg:w-[30%] w-full">
       <Search />
       <Categories categories={categories} />
       <PopularPosts />

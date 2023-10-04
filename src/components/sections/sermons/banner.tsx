@@ -10,18 +10,18 @@ const SermonBanner = ({ image }: { image: StaticImport | string }) => {
     <div className="relative">
       <Image src={image} alt="banner" layout="responsive" />
       <div className="flex p-5 -mt-10 slant relative w-[85%] mx-auto z-10 bg-primary-yellow rounded-md">
-        <div className="flex justify-between w-full">
+        <div className="flex justify-between w-full flex-col sm:flex-row">
           <div className="flex flex-col gap-4">
             <p className="text-white font-bold text-2xl">Watch Now</p>
-            <div className="flex gap-4">
+            <div className="flex gap-4 text-lg">
               <div className="flex items-center justify-center bg-white p-4 rounded-md">
-                <BsHeadphones className="text-[#252525] text-lg" />
+                <BsHeadphones className="text-[#252525]" />
               </div>
               <div className="flex items-center justify-center bg-white p-4 rounded-md">
-                <LuMusic2 className="text-[#252525] text-lg" />
+                <LuMusic2 className="text-[#252525]" />
               </div>
               <div className="flex items-center justify-center bg-white p-4 rounded-md">
-                <BsBook className="text-[#252525] text-lg" />
+                <BsBook className="text-[#252525]" />
               </div>
             </div>
           </div>

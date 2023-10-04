@@ -22,17 +22,17 @@ const navLinks: Navlinks[] = [
         title: "Gallery",
         slug: "/gallery-columns",
       },
-      {
-        type: "dropdown",
-        title: "Our Pastors",
-        slug: "/our-pastors",
-        children: [
-          {
-            title: "Our Pastors Slide",
-            slug: "/our-pastors-slide",
-          },
-        ],
-      },
+      // {
+      //   type: "dropdown",
+      //   title: "Our Pastors",
+      //   slug: "/our-pastors",
+      //   children: [
+      //     {
+      //       title: "Our Pastors Slide",
+      //       slug: "/our-pastors-slide",
+      //     },
+      //   ],
+      // },
       {
         type: "dropdown",
         title: "Campaigns",
@@ -111,6 +111,7 @@ const navLinks: Navlinks[] = [
   {
     type: "link",
     title: "Contact Us",
+    slug: "/contact-us",
   },
 ];
 

@@ -4,7 +4,7 @@ import React from "react";
 
 const Donate = () => {
   return (
-    <div className="w-[70%]">
+    <div className="lg:w-[70%] w-full">
       <h3 className="text-lg text-primary-yellow font-semibold uppercase">
         Donate Here!
       </h3>

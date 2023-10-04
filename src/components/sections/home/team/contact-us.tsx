@@ -28,7 +28,9 @@ const ContactUs = () => {
           </div>
           <Image className="rotate-180 w-full" src={shapebottom} alt="shape" />
         </div>
-        <ContactCard />
+        <div className="w-[85%] md:-mt-36 -mt-20 relative z-10">
+          <ContactCard />
+        </div>
       </div>
     </div>
   );
