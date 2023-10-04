@@ -18,7 +18,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ date, image, title, id }) => {
         </p>
         <div className="py-1 px-3 rounded-sm items-center justify-center text-white bg-primary-yellow absolute -top-3 flex gap-1">
           <AiOutlineCalendar />
-          <p className="text-xs font-semibold">OCT 21, 2021</p>
+          <p className="text-xs font-semibold uppercase">{date}</p>
         </div>
       </div>
     </div>
