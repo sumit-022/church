@@ -42,8 +42,15 @@ interface Navlinks {
 }
 
 interface BlogCardProps {
+  id: number;
+  category: string[];
+  author: string;
+  tags: string[];
+  comments: number;
+  description1: string;
+  description2: string;
   image: string | StaticImport;
   title: string;
   date: string;
-  slug: string;
+  authoricon: string | StaticImport;
 }

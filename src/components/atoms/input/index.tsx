@@ -27,7 +27,7 @@ const Input: React.FC<InputProps> = ({
       onChange={onChange}
     />
   ) : (
-    <div className="flex flex-col gap-1">
+    <div className="flex flex-col gap-1 w-full">
       {label && (
         <label htmlFor={id} className="text-[#8d9297]">
           {label}

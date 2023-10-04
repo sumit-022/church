@@ -245,7 +245,7 @@ const navLinks: Navlinks[] = [
         children: [
           {
             title: "Blog Grid 2",
-            slug: "/blog-grid-2",
+            slug: "/blog-grid",
           },
           {
             title: "Blog Grid 3",
