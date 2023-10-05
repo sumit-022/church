@@ -8,7 +8,7 @@ const BlogReply = () => {
       <p className="text-primary-grey my-2">
         Your email address will not be published. Required fields are marked*
       </p>
-      <div className="flex w-full gap-6 my-6">
+      <div className="flex w-full md:flex-row flex-col gap-6 my-6">
         <Input
           type="text"
           name="name"

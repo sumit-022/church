@@ -50,10 +50,10 @@ const LeftContent = ({
     },
   ];
   return (
-    <div className="w-[70%]">
-      <div className="relative">
+    <div className="lg:w-[70%] w-full">
+      <div className="relative w-full">
         <Image src={image} alt="blog" width={400} className="rounded-md" />
-        <div className="bg-white p-3 flex items-center justify-center gap-4 rounded-md shadow-md absolute -bottom-8 w-[85%] left-10 z-10">
+        <div className="bg-white p-3 flex items-center justify-center gap-4 rounded-md shadow-md absolute -bottom-8 w-[85%] lg:left-10 left-0 z-10">
           {bloginfo.map((item, index) => (
             <div key={index} className="flex items-center gap-2 text-gray-500">
               {item.icon}
@@ -79,12 +79,12 @@ const LeftContent = ({
         </div>
         <p className="my-7 text-primary-grey">{description2}</p>
       </div>
-      <div className="flex gap-6">
-        <Image src={image1} alt="blog" width={400} className="rounded-md" />
-        <Image src={image2} alt="blog" width={400} className="rounded-md" />
+      <div className="flex lg:flex-row flex-col gap-6 w-full">
+        <Image src={image1} alt="blog" className="rounded-md w-full" />
+        <Image src={image2} alt="blog" className="rounded-md w-full" />
       </div>
-      <div className="flex my-7 justify-between">
-        <div className="flex gap-3 items-center">
+      <div className="flex my-7 justify-between flex-wrap">
+        <div className="flex flex-wrap gap-3 items-center">
           {tags?.map((item, index) => (
             <span key={index} className="text-primary-grey text-sm">
               #{item}

@@ -20,7 +20,7 @@ const BreadCrump = () => {
         <Image
           src={image}
           alt="about-us"
-          className="absolute -translate-y-72 top-0 left-0 -z-20"
+          className="absolute top-0 left-0 -z-20"
         />
         <div className="w-full h-full bg-[rgba(0,21,47,0.86)] absolute -z-10 top-0 left-0"></div>
         <div className="flex flex-col justify-center items-center gap-4 h-full">

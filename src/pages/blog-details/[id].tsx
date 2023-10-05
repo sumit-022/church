@@ -18,7 +18,7 @@ const BlogDetails = () => {
       <Layout>
         <BreadCrump />
         <Section>
-          <div className="flex gap-14 my-7">
+          <div className="flex lg:flex-row flex-col gap-14 my-7">
             <LeftContent {...blog} />
             <RightBar />
           </div>
