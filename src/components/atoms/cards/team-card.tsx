@@ -11,7 +11,7 @@ const TeamCard: React.FC<TeamCardProps> = ({ image, name, position }) => {
   return (
     <div className="flex flex-col shadow-md">
       <div className="relative">
-        <Image src={image} alt="team" />
+        <Image src={image} alt="team" className="w-full" />
         <div className="absolute -bottom-6 w-full flex justify-center">
           <div className="relative">
             <IoMdWater className="text-7xl text-primary-yellow" />

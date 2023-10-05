@@ -10,10 +10,10 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div className="relative overflow-hidden">
-      <div className="absolute top-0 left-0 -z-10 h-full">
+      <div className="absolute top-0 left-0 -z-10 w-full h-full">
         <Image
           src={footerbg}
-          className="relative -z-20 h-full"
+          className="relative -z-20 h-full w-full"
           alt="footer background"
           objectFit="cover"
           objectPosition="center"

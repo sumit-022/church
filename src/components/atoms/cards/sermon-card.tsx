@@ -18,7 +18,7 @@ const SermonCard: React.FC<SermonCardProps> = ({
 }) => {
   const router = useRouter();
   return (
-    <div className="flex flex-col max-w-[360px]">
+    <div className="flex flex-col">
       <div className="relative">
         <Image src={image} alt={title} className="rounded-t-md" />
         <div

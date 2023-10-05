@@ -13,7 +13,7 @@ const Sermons = () => {
       </h3>
       <h1 className="text-3xl text-center my-7 font-bold">Our Sermons</h1>
       <span className="border-line block my-7 mx-auto"></span>
-      <div className="flex md:flex-row flex-col gap-8 my-10">
+      <div className="flex md:flex-row flex-col gap-8 my-10 justify-center">
         {data.map((sermon, index) => (
           <SermonCard key={index} {...sermon} />
         ))}

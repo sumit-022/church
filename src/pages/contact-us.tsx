@@ -20,19 +20,19 @@ interface CardProps {
 const ContactUsPage = () => {
   const fields: CardProps[] = [
     {
-      icon: <HiOutlineLocationMarker className="" />,
+      icon: <HiOutlineLocationMarker />,
       title: "Our Location",
       value: "684 West College St. Sun City, United States America.",
       bgimage: bgimage,
     },
     {
-      icon: <TfiHeadphoneAlt className="" />,
+      icon: <TfiHeadphoneAlt />,
       title: "Phone Number",
       value: "(+55) 654 - 545 - 5418",
       bgimage: bgimage,
     },
     {
-      icon: <BsEnvelope className="" />,
+      icon: <BsEnvelope />,
       title: "Email Address",
       value: "info@example.com",
       bgimage: bgimage,
