@@ -22,7 +22,6 @@ const Carousel = () => {
         spaceBetween={0}
         slidesPerView={1}
         navigation
-        onSlideChange={() => console.log("slide change")}
       >
         <SwiperSlide>
           <div className="w-full relative">

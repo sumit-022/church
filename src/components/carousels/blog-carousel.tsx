@@ -21,8 +21,6 @@ const BlogCarousel = ({ data, sliderRef }: Props) => {
         modules={[Navigation]}
         slidesPerView={isMobile ? 1 : isTablet ? 2 : 3}
         slidesPerGroup={1}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
       >
         {data.map((item, index) => (
           <SwiperSlide key={index}>

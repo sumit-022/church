@@ -17,8 +17,6 @@ const TeamCarousel = ({ data }: { data: TeamCardProps[] }) => {
       pagination={{ clickable: true }}
       slidesPerView={isMobile ? 1 : isTablet ? 2 : 3}
       slidesPerGroup={isMobile ? 1 : isTablet ? 2 : 3}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
     >
       {data.map((item, index) => (
         <SwiperSlide key={index}>

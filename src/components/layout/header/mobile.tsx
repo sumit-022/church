@@ -14,7 +14,6 @@ const MobileHeader = () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
     setOpen(!open);
-    console.log(open);
   };
 
   const router = useRouter();

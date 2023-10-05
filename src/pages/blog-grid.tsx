@@ -12,7 +12,7 @@ const BlogGrid = () => {
       <BreadCrump />
       <Section>
         <div className="flex lg:flex-row flex-col gap-14">
-          <div className="lg:w-[70%] w-full justify-center flex flex-wrap gap-14 h-max">
+          <div className="lg:w-[70%] w-full justify-center grid md:grid-cols-2 grid-cols-1 gap-14 h-max">
             {data.map((item, index) => (
               <BlogCard key={index} {...item} />
             ))}

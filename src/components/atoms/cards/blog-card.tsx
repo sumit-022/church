@@ -7,8 +7,8 @@ const BlogCard: React.FC<BlogCardProps> = ({ date, image, title, id }) => {
   const router = useRouter();
   return (
     <div className="flex flex-col h-max">
-      <Image src={image} alt="blog image" />
-      <div className="bg-white pt-6 border p-4 flex flex-col gap-1 relative w-[85%] mx-auto -m-4">
+      <Image src={image} alt="blog image" className="w-full" />
+      <div className="bg-white pt-6 border p-4 flex flex-col gap-1 relative w-[85%] mx-auto -mt-4">
         <h3 className="text-xl leading-tight font-bold">{title}</h3>
         <p
           onClick={() => router.push(`/blog-details/${id}`)}

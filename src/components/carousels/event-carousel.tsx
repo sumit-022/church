@@ -15,8 +15,6 @@ const EventCarousel = ({ data }: { data: EventCardProps[] }) => {
         pagination={{ clickable: true }}
         slidesPerView={isMobile ? 1 : isTablet ? 2 : 3}
         slidesPerGroup={isMobile ? 1 : isTablet ? 2 : 3}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
       >
         {data.map((event) => (
           <SwiperSlide key={event.title}>
