@@ -2,6 +2,7 @@ const navLinks: Navlinks[] = [
   {
     type: "link",
     title: "Home",
+    slug: "/",
   },
   {
     type: "dropdown",
