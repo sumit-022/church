@@ -6,7 +6,7 @@ const navLinks: Navlinks[] = [
   },
   {
     type: "dropdown",
-    title: "Pages",
+    title: "Who are we",
     children: [
       {
         type: "link",
@@ -15,8 +15,13 @@ const navLinks: Navlinks[] = [
       },
       {
         type: "link",
-        title: "Events",
+        title: "Calendar",
         slug: "/events",
+      },
+      {
+        type: "link",
+        title: "Our Commitee",
+        slug: "/our-commitee",
       },
       {
         type: "link",
@@ -43,8 +48,13 @@ const navLinks: Navlinks[] = [
   },
   {
     type: "link",
-    title: "Sermons",
+    title: "Our ministries",
     slug: "/sermons-grid",
+  },
+  {
+    type: "link",
+    title: "News",
+    slug: "/news",
   },
   // {
   //   type: "grid",
@@ -106,7 +116,7 @@ const navLinks: Navlinks[] = [
   // },
   {
     type: "link",
-    title: "Blog",
+    title: "Publications",
     slug: "/blog-grid",
   },
   {

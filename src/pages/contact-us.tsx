@@ -64,6 +64,12 @@ const ContactUsPage = () => {
         </div>
         <div className="my-10">
           <ContactCard />
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d929801.3028774005!2d53.33179009999999!3d24.44952450000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e688915ccf0fb%3A0x48b229ec0d6d5434!2sCSI%20Parish%20Abu%20Dhabi!5e0!3m2!1sen!2sin!4v1696701857578!5m2!1sen!2sin"
+            className="h-[500px] w-full mt-7"
+            loading="lazy"
+            allowFullScreen
+          ></iframe>
         </div>
       </Section>
     </Layout>
